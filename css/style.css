@@ -1,0 +1,277 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.gridContainer{
+	display: grid;
+	grid-template-areas: 
+	"header header"
+	"encabezado encabezado"
+	"textoInformativo imgTxtInformativo"
+    "imgTxtInformativo2 textoInformativo2"
+	"footer footer";
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 100px 1fr auto 400px;
+	background-color: gray;
+}
+
+header{
+	grid-area: header;
+	display: flex;
+    background-color: #4b4b4b;
+    float: right;
+}
+header img {
+	padding: 10px;
+    height: 60px;
+}
+
+
+nav ul {
+	display: flex;
+}
+
+nav ul li {
+	padding: 10px;
+	font-size: 20p;
+	list-style-type: none;
+	position: relative;
+	top: 20px;
+}
+
+nav ul li a{
+    color: black;
+    font-size: 16px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+section.encabezado{
+	grid-area: encabezado;
+}
+
+section.textoInformativo{
+	grid-area: textoInformativo;
+}
+
+section.imgTxtInformativo{
+	grid-area: imgTxtInformativo;
+}
+footer{
+	grid-area: footer;
+	display: flex;
+	justify-content: space-around;
+	padding-top: 20px; 
+    background-color: #4b4b4b;
+}
+.border{
+	border: 1px solid black;
+}
+
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.imgencabezado{
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.textoDer{
+    text-align: justify;
+    padding: 10px;
+}
+.textoIzq2{
+    text-align: right;
+    padding: 10px;
+    float: right;
+}
+.textoIzq{
+    text-align: justify;
+    padding: 10px;
+}
+.tituloIzq{
+    text-align: left;
+    padding: 10px;
+    margin-bottom: 0;
+}
+.tituloDer{
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 0;
+}
+.tituloIzqH{
+    text-align: left;
+    float: left;
+    font-size: 42px;
+    padding: 10px;
+}
+
+.imagenProyI{
+    width: 75%;
+    height: auto;
+    margin-left: 10%;
+    margin-bottom: 5px;
+}
+.imagenProyD{
+    width: 75%;
+    height: auto;
+    margin-left: 10%;
+    margin-top: 5px;
+}
+.centrar{
+    text-align: center;
+    padding: 5px;
+}
+
+@media only screen and (min-width:1240px){
+	.encabezado{
+		font-size: 50px;
+		text-align: center;
+		color: black;
+	}
+}
+
+@media only screen and (min-width:768px) and (max-width:1239px){
+	.gridContainer{
+	display: grid;
+	grid-template-areas: 
+	"header header"
+	"encabezado encabezado"
+	"textoInformativo imgTxtInformativo"
+    "imgTxtInformativo2 textoInformativo2"
+	"footer footer";
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 100px 1fr auto 400px;
+	background-color: gray;
+}
+
+header{
+	grid-area: header;
+	display: flex;
+}
+header img {
+	padding: 10px;
+}
+
+nav ul {
+	display: flex;
+}
+nav ul li {
+	padding: 10px;
+	font-size: 20p;
+	list-style-type: none;
+	position: relative;
+	top: 20px;
+}
+section.encabezado{
+	grid-area: encabezado;
+}
+
+section.textoInformativo{
+	grid-area: textoInformativo;
+}
+
+section.imgTxtInformativo{
+	grid-area: imgTxtInformativo;
+}
+footer{
+	grid-area: footer;
+	display: flex;
+	justify-content: space-around;
+	padding-top: 20px; 
+}
+.border{
+	border: 1px solid black;
+}
+}
+
+@media only screen and (min-width:0px) and (max-width:767px){
+	.gridContainer{
+	display: grid;
+	grid-template-areas: 
+	"header"
+	"encabezado"
+	"textoInformativo"
+	"imgTxtInformativo"
+    "textoInformativo2"
+	"imgTxtInformativo2"
+	"footer";
+	grid-template-columns: 100%;
+	grid-template-rows: 100px 1fr auto 400px auto;
+	background-color: gray;
+}
+
+header{
+	grid-area: header;
+	display: flex;
+}
+header img {
+	padding: 10px;
+}
+nav ul {
+	display: flex;
+}
+nav ul li {
+	padding: 10px;
+	font-size: 20p;
+	list-style-type: none;
+	position: relative;
+	top: 20px;
+}
+section.encabezado{
+	grid-area: encabezado;
+}
+
+section.textoInformativo{
+	grid-area: textoInformativo;
+}
+
+section.imgTxtInformativo{
+	grid-area: imgTxtInformativo;
+}
+section.textoInformativo2{
+	grid-area: textoInformativo2;
+}
+
+section.imgTxtInformativo2{
+	grid-area: imgTxtInformativo2;
+}
+footer{
+	grid-area: footer;
+	display: flex;
+	justify-content: space-around;
+	padding-top: 20px; 
+}
+.border{
+	border: 1px solid black;
+}
+.encabezado{
+		font-size: 30px;
+		text-align: center;
+		color: black;
+	}
+p{font-size: 18px;}
+span{font-size: 20px;}
+h6{font-size: 22px;}
+h5{font-size: 26px;line-height: 30px;}
+}
+
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.imgencabezado{
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
